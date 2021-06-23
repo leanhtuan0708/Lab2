@@ -106,13 +106,15 @@ namespace Lab2.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        
+        
         public ActionResult DeleteBook(int? Id)
         {
             var books = new List<Book>();
             books.Add(new Book(1, "HTML5 & CSS3 The complete Manual", "Author Name Book 1", "/Content/Images/book1.jpg"));
             books.Add(new Book(2, "HTML5 & CSS3 The complete Manua2", "Author Name Book 2", "/Content/Images/book2.jpg"));
             books.Add(new Book(3, "HTML5 & CSS3 The complete Manua3", "Author Name Book 3", "/Content/Images/book3.jpg"));
-            //check if not exit
+            
             foreach (Book b in books)
             {
                 if (b.Id == Id)
