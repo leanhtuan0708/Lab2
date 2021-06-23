@@ -1,0 +1,25 @@
+﻿@model Lab2.Models.Book
+
+@{
+    ViewBag.Title = "DeleteBook";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DeleteBook</h2>
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal" style="color:red">
+        <h3>Bạn có chắc chắn muốn xóa?</h3>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
