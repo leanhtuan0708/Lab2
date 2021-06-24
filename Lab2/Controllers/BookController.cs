@@ -115,14 +115,13 @@ namespace Lab2.Controllers
             books.Add(new Book(2, "HTML5 & CSS3 The complete Manua2", "Author Name Book 2", "/Content/Images/book2.jpg"));
             books.Add(new Book(3, "HTML5 & CSS3 The complete Manua3", "Author Name Book 3", "/Content/Images/book3.jpg"));
             
-            foreach (Book b in books)
-            {
+            foreach (Book b in books){
                 if (b.Id == Id)
                 {
                     books.Remove(b);
                     break;
-                }
-            }
+                }}
+            
             return View("ListBookModel", books);
         }
 
